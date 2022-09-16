@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarea</title>
+    <script type="text/javascript">
+    	function convertir(){
+    		var numero=Number(document.getElementById('numdia').value);
+	    	switch(numero){
+	    		case 1:
+	    			document.write("El nombre del día es Lunes");
+	    		break;
+	    		case 2:
+	    			document.write("El nombre del día es Martes");
+	    		break;
+	    		case 3:
+	    			document.write("El nombre del día es miercoles");
+	    		break;
+	    		case 4:
+	    			document.write("El nombre del día es Jueves");
+	    		break;
+	    		case 5:
+	    			document.write("El nombre del día es Viernes");
+	    		break;
+	    		case 6:
+	    			document.write("El nombre del día es Sabado");
+	    		break;
+	    		case 7:
+	    			document.write("El nombre del día es Domingo");
+	    		break;
+	    		default:
+	    			document.write("el numero no coinside con ningun caso");
+	    		break;
+
+	    	}
+    	}
+
+    	function verificar(){
+
+    		var edad=Number(document.getElementById('edad').value);
+    		if (edad > 17 ) {
+    			document.write("Tienes edad para conducir");
+    		}else
+    		{
+    			document.write("No tienes edad para conducir");
+    		}
+    	}
+    	function verificarVotacion(){
+
+    		var edad=Number(document.getElementById('edadVotacion').value);
+    		if (edad > 17 ) {
+    			document.write("Tienes edad para votar");
+    		}else
+    		{
+    			document.write("No tienes edad para votar");
+    		}
+    	}
+
+    	function hallar(){
+
+    		var num1=Number(document.getElementById('num1').value);
+    		var num2=Number(document.getElementById('num2').value);
+
+    		if (num1 > num2) {
+    			document.write(num1);
+    		}else
+    		{
+    			document.write(num2);
+    		}
+    	}
+    	function notaPromedio(){
+
+    		var num1=Number(document.getElementById('nota1').value);
+    		var num2=Number(document.getElementById('nota2').value);
+    		var num3=Number(document.getElementById('nota3').value);
+
+    		var pro;
+    		pro=(num1+num2+num3)/3;
+    		if (pro>=51) 
+    		{
+    			document.write("promedio "+pro+ " Aprobo");
+    		}
+    		else
+    		{
+				document.write("promedio "+pro+ " Reprobo");
+    		}
+    	}
+    </script>
+</head>
+<body>
+	<div class="conteiner">
+		<div></div>
+		<div class="tarea">
+			<h1>Ejercicios JavaScrip</h1>
+			<br>
+			<h4>Ejercicio 1</h4>
+			<label>Ingrese un número del 1 al 7 :</label><br>
+			<input type="text" id="numdia" name="numdia"><br>
+			<input type="button" value="Convertir"  onclick="convertir()"><br>
+			
+
+			<h4>Ejercicio 2</h4>
+			<label>Ingrese su edad :</label><br>
+			<input type="text" id="edad"><br>
+			<input type="button" value="Verificar"  onclick="verificar()"><br>
+
+
+			<h4>Ejercicio 3</h4>
+			<label>Ingrese primer numero :</label><br>
+			<input type="text" id="num1"><br>
+			<label>Ingrese segundo numero :</label><br>
+			<input type="text" id="num2"><br>
+			<input type="button" value="Hallar"  onclick="hallar()"><br>
+
+			<h4>Ejercicio 4</h4>
+			<label>Ingrese nota 1:</label><br>
+			<input type="text" id="nota1"><br>
+			<label>Ingrese nota 2 :</label><br>
+			<input type="text" id="nota2"><br>
+			<label>Ingrese nota 3 :</label><br>
+			<input type="text" id="nota3"><br>
+			<input type="button" value="NotaPromedio"  onclick="notaPromedio()"><br>
+
+			<h4>Ejercicio 5</h4>
+			<label>Ingrese su edad :</label><br>
+			<input type="number" id="edadVotacion"><br>
+			<input type="button" value="verificarVotacion"  onclick="verificarVotacion()"><br>
+
+
+		</div>
+		<div></div>
+	</div>
+</body>
+</html>
